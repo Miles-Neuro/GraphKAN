@@ -1,0 +1,62 @@
+{
+  "dataset": {
+    "name": "SEED-IV",
+    "format": "mat_features",
+    "root": "data/SEED-IV",
+    "feature": "de_LDS",
+    "classes": [
+      "neutral",
+      "sad",
+      "fear",
+      "happy"
+    ]
+  },
+  "protocol": {
+    "type": "SD",
+    "subject": 1,
+    "session": 1,
+    "sd_split": "first_per_class",
+    "train_trials_per_class": 4
+  },
+  "normalization": {
+    "scope": "global"
+  },
+  "model": {
+    "montage": "assets/seed_montage.json",
+    "in_features": 5,
+    "hidden_features": 32,
+    "head_width": 128,
+    "chebyshev_order": 1,
+    "groups": 5,
+    "activation": "swish",
+    "backend": "kat",
+    "dropout": 0.5,
+    "delta": 5.0,
+    "adjacency_threshold": 0.1,
+    "variant": "5-Swish"
+  },
+  "optimizer": {
+    "name": "Adam",
+    "lr": 0.001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "amsgrad": false,
+    "weight_decay": 0.0001,
+    "head_weight_decay": 0.01,
+    "rational_weight_decay": 0.0,
+    "weights_only": true
+  },
+  "training": {
+    "epochs": 100,
+    "batch_size": 128,
+    "label_smoothing": 0.0,
+    "selection": "test_peak",
+    "device": "auto",
+    "num_threads": 4,
+    "seed": 123
+  },
+  "output": "outputs"
+}

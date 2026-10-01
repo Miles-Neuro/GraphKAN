@@ -1,0 +1,45 @@
+{
+  "confirmed": false,
+  "artifact_cleaned": false,
+  "signal_unit": "microvolts",
+  "subjects": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "classes": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "instructions": "Template only. Supply all confirmed trials for subjects 1-20, real class labels, retention decisions, and completed artifact processing before setting confirmed=true.",
+  "trials": [
+    {
+      "subject": 1,
+      "session": 1,
+      "trial": 1,
+      "file": "sub1_session1.set",
+      "start_event": "S17",
+      "end_event": "S33",
+      "label": null,
+      "retain": null
+    }
+  ]
+}

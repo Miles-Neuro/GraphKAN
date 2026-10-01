@@ -1,0 +1,6 @@
+numpy==2.4.6
+scipy==1.17.1
+torch==2.11.0
+# CUDA-enabled torch and kat_rational must be installed for the target platform.
+# On Windows, install a compatible triton-windows package separately.
+# See docs/INSTALL.md; no vendored KAT source.
